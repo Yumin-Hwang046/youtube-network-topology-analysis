@@ -10,6 +10,18 @@ The primary research objective is to determine whether the YouTube network exhib
 
 
 
+
+## Tools and Technologies
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white)
+![NetworkX](https://img.shields.io/badge/NetworkX-8A2BE2.svg?style=for-the-badge&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-314655?style=for-the-badge&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logoColor=white)
+
+
 ## Environment Setup (Reproducibility)
 This project uses `uv` for lightning-fast dependency management and strict version locking.
 
@@ -23,8 +35,8 @@ uv run jupyter notebook
 
 ## Dataset
 - **Source:** Stanford Network Analysis Project (SNAP) - `com-youtube` dataset
-- **Acquisition:** Kaggle API with manual fallback (`wolfram77/graphs-snap-com-youtube`)
-- **Format:** Matrix Market format (`.mtx`) parsed as an undirected graph
+- **Acquisition:** Direct HTTP Download (Stanford SNAP Official Server)
+- **Format:** Tab-separated Edge List format (`.txt`) parsed as an undirected graph
 - **Scale:**
   - Nodes: 1,134,890
   - Edges: 2,987,624
@@ -35,7 +47,7 @@ The project is structured sequentially across six Jupyter notebooks. Each step b
 
 1. **`01_data_load.ipynb`** (Data Provenance)
    - **Action:** Loads the dataset via local path or Kaggle API fallback.
-   - **Result:** Secures and extracts the `com-Youtube.mtx` edge list for reproducible analysis.
+   - **Result:** Secures and extracts the `com-youtube.ungraph.txt` edge list for reproducible analysis.
 
 2. **`02_graph_construction.ipynb`** (Graph Definition Clarity)
    - **Action:** Constructs the undirected NetworkX graph object.
