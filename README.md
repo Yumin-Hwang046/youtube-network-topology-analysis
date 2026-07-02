@@ -55,16 +55,16 @@ The project is structured sequentially across six Jupyter notebooks. Each step b
 
 3. **`03_exploratory_analysis.ipynb`** (Empirical Properties)
    - **Action:** Computes baseline metrics using approximation techniques (random sampling) for computational feasibility.
-   - **Insight:** Reveals a highly right-skewed degree distribution (plotted on a log-log scale) where the vast majority of users have very few connections, while a tiny fraction of "mega-hubs" possess tens of thousands of friends.
+   - **Insight:** We observe a highly right-skewed degree distribution, where the vast majority of users exhibit few connections, while a small fraction of "hubs" possess a disproportionately large number of connections.
 
 4. **`04_model_comparison_ER_BA_WS.ipynb`** (Deviation Detection)
    - **Action:** Benchmarks the empirical network against scaled theoretical null models (ER, BA, WS).
-   - **Insight:** The empirical degree distribution almost perfectly mirrors the Barabasi-Albert (BA) scale-free model. However, an unexpected structural deviation emerges: the real network's clustering coefficient is significantly higher than what pure preferential attachment (BA) predicts.
+   - **Insight:** The empirical degree distribution exhibits patterns consistent with the Barabasi-Albert (BA) scale-free model. However, the results suggest a structural deviation: the empirical clustering coefficient is substantially higher than the baseline expectation of pure preferential attachment.
 
 5. **`05_research_question_analysis.ipynb`** (Mechanism Interpretation)
    - **Action:** Investigates the root cause of the clustering deviation through data-driven hypothesis testing.
-   - **Insight:** Identifies that the top 1% of hubs control a massive percentage of all network traffic. The deviation from the pure BA model is analytically attributed to algorithmic influence (triadic closure via recommendations) and user homophily (tightly-knit communities). This hybrid structure grants the network high robustness to random failures but extreme structural sensitivity to targeted attacks.
+   - **Insight:** We observe that the top 1% of hubs account for a massive percentage of all network edges. The deviation from the pure BA model may reflect external factors such as algorithmic influence (e.g., triadic closure via recommendations) and user homophily. This observed hybrid structure indicates high robustness to random node failures but suggests structural sensitivity to targeted hub removal.
 
 6. **`06_visualization_report_assets.ipynb`** (Report Asset Generation)
    - **Action:** Generates clean, publication-ready figures for the final written report.
-   - **Result:** Produces a comparative bar chart that visually highlights and proves the clustering coefficient deviation discussed in Notebook 05.
+   - **Result:** Produces a comparative bar chart that visualizes the observed clustering coefficient deviation discussed in Notebook 05.
