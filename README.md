@@ -47,9 +47,9 @@ uv run jupyter notebook
 ## Analysis Pipeline & Key Insights
 The project is structured sequentially across six Jupyter notebooks. Each step builds upon the previous one, transitioning from raw data processing to structural discovery:
 
-1. **`01_data_load.ipynb`** (Data Provenance)
-   - **Action:** Loads the dataset via local path or Kaggle API fallback.
-   - **Result:** Secures and extracts the `com-youtube.ungraph.txt` edge list for reproducible analysis.
+1. **01_data_load.ipynb** (Data Provenance)
+   - **Action:** Downloads the dataset directly from the Stanford SNAP repository via HTTP request.
+   - **Result:** Retrieves the `com-youtube.ungraph.txt` edge list from the official SNAP source, ensuring reproducibility and eliminating dependency on local or external API-based fallbacks.
 
 2. **`02_graph_construction.ipynb`** (Graph Definition Clarity)
    - **Action:** Constructs the undirected NetworkX graph object.
