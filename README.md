@@ -9,7 +9,9 @@ This project analyzes the structure of the YouTube social network using graph th
 The primary research objective is to determine whether the YouTube network exhibits scale-free or small-world properties, with a focus on understanding degree distributions, hub dominance, and overall structural robustness.
 
 
+## Report
 
+📄 [Full Analysis Report (PDF)](https://github.com/Yumin-Hwang046/youtube-network-topology-analysis/blob/main/report/A_Graph-Theoretic_Analysis.pdf)
 
 ## Tools and Technologies
 
