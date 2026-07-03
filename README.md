@@ -36,6 +36,7 @@ uv run jupyter notebook
 ```
 ## Project Structure
 
+``` 
 youtube-network-topology-analysis/
 │
 ├── data/
@@ -68,7 +69,7 @@ youtube-network-topology-analysis/
 ├── .gitignore
 ├── pyproject.toml
 └── LICENSE
-
+``` 
 
 ## Dataset
 - **Source:** Stanford Network Analysis Project (SNAP) - `com-youtube` dataset
