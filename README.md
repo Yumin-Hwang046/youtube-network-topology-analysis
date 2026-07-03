@@ -34,6 +34,41 @@ uv sync
 # 2. Launch Jupyter Notebook within the isolated environment
 uv run jupyter notebook
 ```
+## Project Structure
+
+youtube-network-topology-analysis/
+│
+├── data/
+│   └── raw/
+│       └── com-youtube.ungraph.txt        # SNAP raw edge list
+│
+├── notebooks/
+│   ├── 01_data_load.ipynb
+│   ├── 02_graph_construction.ipynb
+│   ├── 03_exploratory_analysis.ipynb
+│   ├── 04_model_comparison_ER_BA_WS.ipynb
+│   ├── 05_research_question_analysis.ipynb
+│   └── 06_visualization_report_asses...ipynb
+│
+├── src/
+│   └── graph_utils.py                      # reusable graph functions
+│
+├── results/
+│   └── figures/
+│       ├── degree_distribution.png
+│       ├── model_comparison.png
+│       └── clustering_deviation.png
+│
+├── report/
+│   └── A_Graph-Theoretic_Analysis_of_the_YouTube_Social_Network.pdf
+│
+├── main.py                                 # optional entry point
+├── extract_figs.py                         # figure generation pipeline
+├── README.md
+├── .gitignore
+├── pyproject.toml
+└── LICENSE
+
 
 ## Dataset
 - **Source:** Stanford Network Analysis Project (SNAP) - `com-youtube` dataset
@@ -47,7 +82,7 @@ uv run jupyter notebook
 ## Analysis Pipeline & Key Insights
 The project is structured sequentially across six Jupyter notebooks. Each step builds upon the previous one, transitioning from raw data processing to structural discovery:
 
-1. **01_data_load.ipynb** (Data Provenance)
+1. **`01_data_load.ipynb`** (Data Provenance)
    - **Action:** Downloads the dataset directly from the Stanford SNAP repository via HTTP request.
    - **Result:** Retrieves the `com-youtube.ungraph.txt` edge list from the official SNAP source, ensuring reproducibility and eliminating dependency on local or external API-based fallbacks.
 
